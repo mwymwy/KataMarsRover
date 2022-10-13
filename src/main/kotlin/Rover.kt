@@ -1,3 +1,2 @@
-class Rover(val x: Int, val y: Int) {
-
+class Rover(val point: Point, val direction: Direction) {
 }

@@ -3,13 +3,14 @@ import org.junit.jupiter.api.Test
 
 class RoverTest {
     @Test
-    internal fun `Should Create A Rover at initial starting point`() {
-        val y = 1
-        val x = 1
+    internal fun `should create a rover at initial starting point and with a facing direction`() {
+        val point = Point(x = 1, y = 1)
+        val direction = Direction.NORTH
 
-        val rover = Rover(x,y)
+        val rover = Rover(point, direction)
 
-        assertThat(rover.x).isEqualTo(x)
-        assertThat(rover.y).isEqualTo(y)
+        assertThat(rover.point).isEqualTo(point)
+        assertThat(rover.direction).isEqualTo(direction)
     }
+
 }
