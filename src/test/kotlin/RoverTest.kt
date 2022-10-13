@@ -1,5 +1,4 @@
-import org.assertj.core.api.Assertions.assertThat
-import org.assertj.core.api.Assertions.assertThatThrownBy
+import org.assertj.core.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 class RoverTest {
@@ -16,13 +15,16 @@ class RoverTest {
 
     @Test
     internal fun `the rover should receive an array of commands`(){
-        val rover = Rover(Point(1, 1), Direction.NORTH)
-        val command2 = DummyCommand()
-        val command1 = DummyCommand()
+        val rover = aRover()
+        val command2 = Command()
+        val command1 = Command()
 
-        assertThatThrownBy {
+        assertThatCode {
             rover.receive(command1, command2)
         }.doesNotThrowAnyException()
     }
+
+
+
 
 }
