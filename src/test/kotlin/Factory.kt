@@ -1,1 +1,1 @@
-fun aRover() = Rover(Point(1, 1), Direction.NORTH)
+fun aRover(point: Point = Point(1, 1), direction: Direction = Direction.NORTH) = Rover(Point(1, 1), Direction.NORTH)

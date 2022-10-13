@@ -14,7 +14,7 @@ class RoverTest {
     }
 
     @Test
-    internal fun `the rover should receive an array of commands`(){
+    internal fun `the rover should receive an array of commands`() {
         val rover = aRover()
         val command2 = Command()
         val command1 = Command()
